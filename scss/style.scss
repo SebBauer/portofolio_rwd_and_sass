@@ -1,0 +1,466 @@
+@import 'Reset';
+@import 'Variables';
+@import 'Mixins';
+
+html {
+    font-size: 10px;
+}
+
+header {
+    background: url('#{$img_path}background.jpg') center/cover no-repeat;
+    position: relative;
+    @include sizes(100%, 100vh);
+    
+        #shutter{
+            background-color: rgba(0, 0, 0, 0.7);
+            @include sizes(100%, 100vh);
+            position: absolute;
+            }
+    
+        #logo {
+            position: relative;
+            padding-top: 1rem;
+            text-align: center;
+            @include sizes(30rem, 10vh);
+            margin: 0 auto;
+            
+    
+            h1 {
+                position: relative;
+                color: $h_font_color;
+                border-bottom: 1px solid white;
+                font: {
+                    size: 2.6rem;
+                    family: $h_font_family;
+                    }
+            }
+        
+            h2 {
+                position: relative;
+                color: $h_font_color;
+                line-height: 3.5rem;
+                font: {
+                    family: $h_font_family;
+                    size: 2rem;
+                    }
+            }
+        }
+        
+        p {
+            position: relative;
+            margin: 10rem auto;
+            width: 80%;
+            text-align: center;
+            color: white;
+            font: {
+                family: 'Tangerine', cursive;
+                size: 6rem;
+                }
+        }
+    
+}
+    
+nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+        
+    ul {
+            
+        a {
+            @include flex(flex, center, center);
+            @include sizes(25%, 10rem);
+            text-align: center;
+            float: left;
+            list-style: none;
+            font: {
+                family: $h_font_family;
+                size: 1.65rem;
+                }
+                    
+            &:hover {
+                background-color: rgba(220, 20, 60, 0.41);
+                }
+            
+             
+                text-decoration: none;
+                color: white;
+            
+            }
+        }
+}
+
+.container {         // Container to all sections //
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+h3 {                // h3 to all sections //
+    text-align: center;
+    color: $h_font_color;
+    padding: 1.5rem 0;
+    letter-spacing: .1rem;
+    font: {
+         family: $h_font_family;
+         size: 4rem;
+        }
+    }
+
+p {                // p to all sections //
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.9rem;
+  }
+
+section:nth-child(even){    
+    background-color: rgb(245, 245, 245);
+}
+
+section:nth-child(odd){
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+// Sections //
+
+#section_one { 
+    
+    #photo {
+        @include sizes(20rem, 20rem);
+        margin: 2rem auto;
+	    border-radius: 15rem;
+        border: 1rem solid $h_font_color;
+        background: url('#{$img_path}face.jpg') top/cover no-repeat;
+        }    
+}
+
+#section_two {
+
+    .services {
+        transition: background 1s ease;
+        border-radius: 2rem;
+        margin-bottom: 3rem;
+        
+        }
+    
+    i {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+        color: white;
+        font: {
+            size: 6rem;
+            }
+    
+       }
+    
+    h4 {
+        text-align: center;
+        letter-spacing: .1rem;
+        padding-top: 1rem;
+        color: whitesmoke;
+        font: {
+            family: $h_font_family;
+            size: 2.5rem;
+            }
+        }
+    
+    p {
+        padding: 2.5rem .5rem;
+        color: white;
+    }
+    
+}
+
+#section_three {
+       
+    .container {
+        
+        div {
+            margin: 5rem auto;
+            @include sizes(28rem, 19rem);
+    
+            @each $portfolio in $portfolio_pictures {
+                &:nth-child(#{$portfolio_number}) {
+                    background: url('#{$img_path}#{$portfolio}.png') center/contain no-repeat;
+                }
+                               
+                $portfolio_number: $portfolio_number + 1;
+                }           
+            }
+        }
+}
+
+#section_four {
+    
+    .container {
+            
+        form {
+            @include flex(flex, center, center);
+            flex-direction: column;
+            color: white;
+            font-family: 'Dosis', sans-serif;
+            margin: 3rem auto;
+            
+                span {
+                    padding-right: 1rem;
+                    font-size: 1.1rem;
+                }
+            
+                #span_name {
+                    padding-right: 2rem;
+                }
+            
+            
+                input[type="text"] {
+                    border: 1px solid white;
+                    border-radius: 4px;
+                    background-color: rgba(219, 146, 161, 0.44);
+                    color: white;
+                    
+                }
+            
+                textarea {
+                    margin-top: .5rem;
+                    border: 1px solid white;
+                    border-radius: 4px;
+                    background-color: rgba(219, 146, 161, 0.44);
+                    color: white;
+                }
+            
+                input[type="submit"] {
+                    @include sizes(10rem, 3rem);
+                    border: 2px solid white;                    
+                    border-radius: 4px;
+                    background-color: darkred;
+                    color: white;
+                }
+            }
+        }
+        
+}
+
+// Medias //
+
+@media (min-width: 700px) {
+    
+    #section_one {
+        overflow: hidden;
+        
+            #photo {
+                margin: 0;
+                float: left;
+                margin-right: 2rem;
+                @include sizes(25rem, 25rem);
+            }    
+        
+            p {
+                padding-top: 4rem;
+                font-size: 2.2rem;
+            }
+        }
+    
+} 
+
+
+@media (min-width: 798px) {
+    
+    #section_one {
+        
+        #photo {
+            margin-bottom: 2rem;
+        }  
+    }
+}
+
+@media (min-width: 850px) {
+    
+    header {
+        
+        #logo {
+            width: 60rem;
+            
+            h1 {
+                font-size: 4rem;
+            }
+            
+            h2 {
+                font-size: 4.5rem;
+                line-height: 6rem;
+            }
+        }
+        
+        p {
+            @include flex(flex, center, center);
+            @include sizes(45%, 90%);
+            float: left;
+            margin: 0;
+            font-size: 11rem;
+        }
+    }
+       
+           
+    nav {
+        @include flex(flex, center, center);
+        @include sizes(50%, 90vh);
+        position: relative;
+        float: right;
+        
+        ul {
+            width: 100%;
+            display: table;
+                        
+            a {
+                @include sizes(50%, 20rem);
+                font-size: 4rem;
+                transition: all 1.5s ease;
+                            
+                &:hover {
+                    background-color: rgba(220, 20, 60, 0.41);
+                    }
+                }
+            }
+    }
+
+    .container {
+        width: 80%;
+    }
+
+    #section_three {
+            
+        .container {
+            overflow: hidden;
+            position: relative;
+          
+                div {
+            
+                    &:nth-child(3) {
+                        float: left;
+                        width: 40%;
+                    }
+            
+                    &:nth-child(4) {
+                        float: right;
+                        width: 40%;
+                    }
+            
+                    &:nth-child(5) {
+                        display: flex;
+                        flex-direction: column;
+                    }         
+                }
+            }
+    }
+    
+    #section_four {
+        
+        .container {
+                
+            form {
+                @include flex(flex, center, center);
+                flex-direction: column;
+                color: white;
+                font-family: 'Dosis', sans-serif;
+                margin: 3rem auto;
+                    
+                    span {
+                        padding-right: 1rem;
+                        font-size: 1.1rem;
+                    }
+                    
+                    #span_name {
+                        padding-right: 2rem;
+                    }
+                    
+                    
+                    input[type="text"] {
+                        @include sizes(25rem, 2.2rem);                 
+                    }
+                    
+                    textarea {
+                        @include sizes(30rem, 15rem);
+                    }
+                    
+                    input[type="button"] {
+                        @include sizes(12rem, 4rem);
+                    }
+                }
+            }       
+        }
+}
+
+@media (min-width: 1250px) {
+    
+    #section_two {
+        
+        .container {
+            overflow: hidden;
+            display: flex;
+            justify-content: space-evenly;
+            
+                h3 {
+                    padding: 2rem 0;
+                }
+                
+            .services {
+                float: left;
+                display: flex;
+                flex-direction: column;
+                width: 31%;
+                
+                    i {
+                        font-size: 7rem;
+                    }
+                
+                    h4 {
+                        font-size: 2.7rem;
+                    }
+                
+                    p {
+                        font-size: 2rem;
+                    }
+                
+                &:hover {
+                background-color: whitesmoke;
+            
+                    i {
+                        color: $h_font_color;
+                    }
+            
+                    h4 {
+                        color: rgba(155, 66, 84, 0.9); 
+                    }
+            
+                    p {
+                        color: rgba(0, 0, 0, 0.7);
+                    }
+                }
+            }
+        }
+    }
+    
+    #section_three {
+        
+        .container {
+            
+            div {
+                
+                &:nth-child(3) {
+                    width: 33.3333%;
+                }
+                
+                &:nth-child(4) {
+                    float: left;
+                    width: 33.3333%;
+                }
+                
+                &:nth-child(5) {
+                    float: left;
+                    width: 33.3333%;
+                }
+            }    
+        }
+    }
+}
+
+
+    

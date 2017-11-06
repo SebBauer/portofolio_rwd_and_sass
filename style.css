@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 10px; }
+
+header {
+  background: url("images/background.jpg") center/cover no-repeat;
+  position: relative;
+  width: 100%;
+  height: 100vh; }
+  header #shutter {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100vh;
+    position: absolute; }
+  header #logo {
+    position: relative;
+    padding-top: 1rem;
+    text-align: center;
+    width: 30rem;
+    height: 10vh;
+    margin: 0 auto; }
+    header #logo h1 {
+      position: relative;
+      color: crimson;
+      border-bottom: 1px solid white;
+      font-size: 2.6rem;
+      font-family: "Courgette", cursive; }
+    header #logo h2 {
+      position: relative;
+      color: crimson;
+      line-height: 3.5rem;
+      font-family: "Courgette", cursive;
+      font-size: 2rem; }
+  header p {
+    position: relative;
+    margin: 10rem auto;
+    width: 80%;
+    text-align: center;
+    color: white;
+    font-family: 'Tangerine', cursive;
+    font-size: 6rem; }
+
+nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+  nav ul a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 10rem;
+    text-align: center;
+    float: left;
+    list-style: none;
+    font-family: "Courgette", cursive;
+    font-size: 1.65rem;
+    text-decoration: none;
+    color: white; }
+    nav ul a:hover {
+      background-color: rgba(220, 20, 60, 0.41); }
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 2rem; }
+
+h3 {
+  text-align: center;
+  color: crimson;
+  padding: 1.5rem 0;
+  letter-spacing: .1rem;
+  font-family: "Courgette", cursive;
+  font-size: 4rem; }
+
+p {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.9rem; }
+
+section:nth-child(even) {
+  background-color: whitesmoke; }
+
+section:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.7); }
+
+#section_one #photo {
+  width: 20rem;
+  height: 20rem;
+  margin: 2rem auto;
+  border-radius: 15rem;
+  border: 1rem solid crimson;
+  background: url("images/face.jpg") top/cover no-repeat; }
+
+#section_two .services {
+  transition: background 1s ease;
+  border-radius: 2rem;
+  margin-bottom: 3rem; }
+#section_two i {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  color: white;
+  font-size: 6rem; }
+#section_two h4 {
+  text-align: center;
+  letter-spacing: .1rem;
+  padding-top: 1rem;
+  color: whitesmoke;
+  font-family: "Courgette", cursive;
+  font-size: 2.5rem; }
+#section_two p {
+  padding: 2.5rem .5rem;
+  color: white; }
+
+#section_three .container div {
+  margin: 5rem auto;
+  width: 28rem;
+  height: 19rem; }
+  #section_three .container div:nth-child(3) {
+    background: url("images/portfolio_biuro_rachunkowe.png") center/contain no-repeat; }
+  #section_three .container div:nth-child(4) {
+    background: url("images/portfolio_2.png") center/contain no-repeat; }
+  #section_three .container div:nth-child(5) {
+    background: url("images/portfolio_3.png") center/contain no-repeat; }
+
+#section_four .container form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  font-family: 'Dosis', sans-serif;
+  margin: 3rem auto; }
+  #section_four .container form span {
+    padding-right: 1rem;
+    font-size: 1.1rem; }
+  #section_four .container form #span_name {
+    padding-right: 2rem; }
+  #section_four .container form input[type="text"] {
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: rgba(219, 146, 161, 0.44);
+    color: white; }
+  #section_four .container form textarea {
+    margin-top: .5rem;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: rgba(219, 146, 161, 0.44);
+    color: white; }
+  #section_four .container form input[type="submit"] {
+    width: 10rem;
+    height: 3rem;
+    border: 2px solid white;
+    border-radius: 4px;
+    background-color: darkred;
+    color: white; }
+
+@media (min-width: 700px) {
+  #section_one {
+    overflow: hidden; }
+    #section_one #photo {
+      margin: 0;
+      float: left;
+      margin-right: 2rem;
+      width: 25rem;
+      height: 25rem; }
+    #section_one p {
+      padding-top: 4rem;
+      font-size: 2.2rem; } }
+@media (min-width: 798px) {
+  #section_one #photo {
+    margin-bottom: 2rem; } }
+@media (min-width: 850px) {
+  header #logo {
+    width: 60rem; }
+    header #logo h1 {
+      font-size: 4rem; }
+    header #logo h2 {
+      font-size: 4.5rem;
+      line-height: 6rem; }
+  header p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    height: 90%;
+    float: left;
+    margin: 0;
+    font-size: 11rem; }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 90vh;
+    position: relative;
+    float: right; }
+    nav ul {
+      width: 100%;
+      display: table; }
+      nav ul a {
+        width: 50%;
+        height: 20rem;
+        font-size: 4rem;
+        transition: all 1.5s ease; }
+        nav ul a:hover {
+          background-color: rgba(220, 20, 60, 0.41); }
+
+  .container {
+    width: 80%; }
+
+  #section_three .container {
+    overflow: hidden;
+    position: relative; }
+    #section_three .container div:nth-child(3) {
+      float: left;
+      width: 40%; }
+    #section_three .container div:nth-child(4) {
+      float: right;
+      width: 40%; }
+    #section_three .container div:nth-child(5) {
+      display: flex;
+      flex-direction: column; }
+
+  #section_four .container form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-family: 'Dosis', sans-serif;
+    margin: 3rem auto; }
+    #section_four .container form span {
+      padding-right: 1rem;
+      font-size: 1.1rem; }
+    #section_four .container form #span_name {
+      padding-right: 2rem; }
+    #section_four .container form input[type="text"] {
+      width: 25rem;
+      height: 2.2rem; }
+    #section_four .container form textarea {
+      width: 30rem;
+      height: 15rem; }
+    #section_four .container form input[type="button"] {
+      width: 12rem;
+      height: 4rem; } }
+@media (min-width: 1250px) {
+  #section_two .container {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly; }
+    #section_two .container h3 {
+      padding: 2rem 0; }
+    #section_two .container .services {
+      float: left;
+      display: flex;
+      flex-direction: column;
+      width: 31%; }
+      #section_two .container .services i {
+        font-size: 7rem; }
+      #section_two .container .services h4 {
+        font-size: 2.7rem; }
+      #section_two .container .services p {
+        font-size: 2rem; }
+      #section_two .container .services:hover {
+        background-color: whitesmoke; }
+        #section_two .container .services:hover i {
+          color: crimson; }
+        #section_two .container .services:hover h4 {
+          color: rgba(155, 66, 84, 0.9); }
+        #section_two .container .services:hover p {
+          color: rgba(0, 0, 0, 0.7); }
+
+  #section_three .container div:nth-child(3) {
+    width: 33.3333%; }
+  #section_three .container div:nth-child(4) {
+    float: left;
+    width: 33.3333%; }
+  #section_three .container div:nth-child(5) {
+    float: left;
+    width: 33.3333%; } }
