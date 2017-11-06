@@ -324,6 +324,16 @@ section:nth-child(odd){
     .container {
         width: 80%;
     }
+    
+    #section_one {
+        .container {
+            width: 100%;
+            #photo {
+                margin-left: 4%;
+                margin-bottom: 5%;
+            }
+        }
+    }
 
     #section_three {
             
@@ -389,6 +399,14 @@ section:nth-child(odd){
 }
 
 @media (min-width: 1250px) {
+    
+    #section_one {
+        .container {
+            p {
+                font-size: 2.4rem;
+            }
+        }
+    }
     
     #section_two {
         

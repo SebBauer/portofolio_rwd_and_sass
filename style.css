@@ -214,6 +214,12 @@ section:nth-child(odd) {
   .container {
     width: 80%; }
 
+  #section_one .container {
+    width: 100%; }
+    #section_one .container #photo {
+      margin-left: 4%;
+      margin-bottom: 5%; }
+
   #section_three .container {
     overflow: hidden;
     position: relative; }
@@ -250,6 +256,9 @@ section:nth-child(odd) {
       width: 12rem;
       height: 4rem; } }
 @media (min-width: 1250px) {
+  #section_one .container p {
+    font-size: 2.4rem; }
+
   #section_two .container {
     overflow: hidden;
     display: flex;
